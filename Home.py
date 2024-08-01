@@ -2,7 +2,7 @@ import streamlit as st
 from googleapiclient.discovery import build
 
 # Configuración de la página
-st.set_page_config(page_title="YouTube Playlist Player", page_icon="▶️")
+st.set_page_config(page_title="YouTube Playlist Player", page_icon="❤")
 
 # Clave de la API de YouTube
 API_KEY = st.secrets["youtube"]["api_key"]
@@ -36,7 +36,7 @@ def get_videos(playlist_id):
     return response['items']
 
 def main():
-    centrar_texto("SamyTube Player 🙏", 2, 'purple')
+    centrar_texto("❤ SamyTube Player 🙏", 2, 'purple')
     st.sidebar.title("Opciones")
 
     playlists = get_playlists()
