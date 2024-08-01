@@ -10,6 +10,11 @@ API_KEY = st.secrets["youtube"]["api_key"]
 # Crear el cliente de la API de YouTube
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
+# Función para centrar el texto
+def centrar_texto(texto, tamanho, color):
+    st.markdown(f"<h{tamanho} style='text-align: center; color: {color}'>{texto}</h{tamanho}>",
+                unsafe_allow_html=True)
+
 def get_playlists():
     # Recuperar listas de reproducción del canal
     request = youtube.playlists().list(
@@ -31,7 +36,7 @@ def get_videos(playlist_id):
     return response['items']
 
 def main():
-    st.title("YouTube Playlist Player")
+    centrar_texto("SamyTube Player ❤ 🙏")
     st.sidebar.title("Opciones")
 
     playlists = get_playlists()
