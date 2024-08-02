@@ -36,7 +36,7 @@ def get_videos(playlist_id):
     return response['items']
 
 def main():
-    centrar_texto("❤ SamyTube Player 🙏", 2, 'purple')
+    centrar_texto("❤ ❤ SamyTube Player ❤ ❤ ", 2, 'pink')
     st.sidebar.title("Opciones")
 
     playlists = get_playlists()
